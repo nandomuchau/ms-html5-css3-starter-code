@@ -1,0 +1,242 @@
+/**
+ * Copyright 2017 Muchau's Softawares All Rights Reserved.
+ * Web starter project code
+ * Luis Fernando Muchau
+ */
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+* {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+}
+html, body {
+      font-family: 'Alegreya', sans-serif;
+      color: #666666;
+      background: #FFF;
+}
+h1 {
+      font-size: 300%;
+      font-weight: 700;
+      text-align: center;
+      color: #a0eb00;
+}
+h2 {
+      font-size: 200%;
+      font-weight: 700;
+      text-align: center;
+      color: #a0eb00;
+}
+P {
+      font-size: 150%;
+      line-height: 150%;
+      text-align: justify;
+}
+hr {
+      margin: 15px 0;
+      border: 0; height: 3px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+img {
+      width: 100%!Important;
+}
+section {
+      margin-top: 10px;
+}
+.center{
+      margin: auto;
+}
+div#wrapper {
+      width:100%;
+}
+/*** Header ***/
+header {
+      padding: 0 20px;
+      background: #000;
+}
+header div#header-inner {
+      height: 100px;
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+}
+#header-inner div#box-logo {
+      flex: 1;
+      margin: auto 20px;
+}
+#header-inner div#box-logo a img#logo {
+      height: auto;
+      max-width: 450px;
+}
+#header-inner div#box-logo a img#mslogo {
+      height: auto;
+      max-width: 100px;
+      display: none;
+}
+#header-inner nav#main-menu {
+      flex:2;
+      margin: auto 20px;
+      display: flex;
+      justify-content: flex-end;
+}
+nav#main-menu a#menu-icon {
+      display: none;
+      width: 40px;
+      height: 40px;
+      background: url(../images/nav.png) center;
+}
+nav#main-menu a#menu-icon:hover#menu-icon {
+      border-radius: 4px 4px 0 0;
+}
+nav#main-menu ul {
+      /*display: flex;*/
+      list-style-type: none;
+}
+nav#main-menu ul li {
+      /*display: flex;*/
+      display: inline-block;
+      font-size: 150%;
+      padding: 0 16px;
+}
+nav#main-menu ul li a {
+      text-decoration: none;
+      color: #FFF;
+}
+nav#main-menu ul li a:hover {
+      color: #a0eb00;
+}
+nav#main-menu ul li a.current {
+      color: #a0eb00;
+}
+/*** END Header ***/
+/*** Main Content ***/
+main#content {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+}
+section#description {
+      margin: 30px 0;
+}
+section#three-boxes {
+      margin: 30px 0;
+      display: flex;
+      justify-content: space-between;
+}
+section#three-boxes article {
+      flex-basis: 32%;
+}
+section#three-boxes article img {
+      margin: 10px 0;
+}
+section#image-text-box {
+      margin-top: 50px;
+}
+section#image-text-box article {
+      display: flex;
+}
+section#image-text-box article img{
+      flex: 1;
+}
+section#image-text-box article div{
+      flex: 2;
+      margin-left: 20px;
+}
+/*** END Main Content ***/
+/*** Footer ***/
+footer#footer {
+      margin-top: 50px;
+      background: #252524;
+}
+footer#footer address {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+}
+footer#footer address div#col1 {
+      height: auto;
+      max-width: 100px;
+      flex:1;
+      display: flex;
+}
+footer#footer address div#col2 {
+      margin: 30px auto;
+      flex:2;
+      display: flex;
+}
+footer#footer address p {
+      padding: 20px 0;
+      font-size: 120%;
+      line-height: 130%;
+      flex:4;
+}
+footer#last-footer {
+      background: #000;
+}
+footer#last-footer div p {
+      text-align: center;
+}
+/*** END Footer ***/
+/*** Mobile Media ***/
+@media screen and (max-width: 950px){
+      #header-inner nav#main-menu {
+            flex:3;
+      }
+      #header-inner div#box-logo a img#logo {
+            display: none;
+      }
+      #header-inner div#box-logo a img#mslogo {
+            display: block;
+      }
+}
+
+@media screen and (max-width: 850px){
+      nav#main-menu a#menu-icon {
+            display: block;
+            display: inline-block;
+      }
+      nav#main-menu ul, nav#main-menu:active ul {
+            display: none;
+            z-index: 1000;
+            position: absolute;
+            padding: 20px;
+            background: #000;
+            right: 20px;
+            top: 60px;
+            border: 1px solid #FFF;
+            width: 40%;
+      }
+      nav#main-menu:hover ul {
+            display: block;
+      }
+      nav#main-menu li {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+      }
+      section#three-boxes, section#image-text-box article {
+            flex-direction: column;
+      }
+      section#image-text-box article img {
+            order: 2;
+      }
+      section#image-text-box article div {
+            order: 1;
+            margin-left: 0;
+      }
+      footer#footer address {
+            display: inherit;
+      }
+      footer#footer address div#col1 {
+            padding-top: 15px;
+      }
+      .center {
+            margin: 0;
+      }
+}
+
